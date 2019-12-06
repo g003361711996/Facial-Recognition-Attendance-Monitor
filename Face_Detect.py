@@ -9,7 +9,7 @@ BASE_URL = 'https://resource2.cognitiveservices.azure.com/face/v1.0'
 CF.BaseUrl.set(BASE_URL)
 CF.Key.set(KEY)
 
-img_url = "images/girls.jpeg"
+img_url = "images/" + input("ENETR FILE:  ")
 if not os.path.isfile(img_url):
     raise FileNotFoundError
 
