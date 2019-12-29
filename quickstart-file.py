@@ -15,7 +15,7 @@ from azure.cognitiveservices.vision.face.models import TrainingStatusType, Perso
 
 # Set the FACE_SUBSCRIPTION_KEY environment variable with your key as the value.
 # This key will serve all examples in this document.
-KEY = os.environ['fc36b866a9c84de9bdd3c29df2b7705d']
+KEY = os.environ['MY_KEY']
 
 # Set the FACE_ENDPOINT environment variable with the endpoint from your Face service in Azure.
 # This endpoint will be used in all examples in this quickstart.
