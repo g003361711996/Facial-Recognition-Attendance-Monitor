@@ -7,7 +7,7 @@ import sys
 
 def recogn(KEY, img_url):
     CF.Key.set(KEY)
-    BASE_URL = 'https://projectface.cognitiveservices.azure.com/face/v1.0'
+    BASE_URL = 'https://projectFYP.cognitiveservices.azure.com/face/v1.0'
     CF.BaseUrl.set(BASE_URL)
     detected = CF.face.detect(img_url)
     print(detected)
