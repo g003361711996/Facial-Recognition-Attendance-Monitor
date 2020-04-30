@@ -14,23 +14,14 @@ import time
 import RPi.GPIO as GPIO
 import time 
 BaseDirectory = '/home/pi/Desktop/ProjectSamples/Photos/' # directory where picamera photos are stored
-KEY = 'fc36b866a9c84de3bdc3c29df2b7705c' # authorization key for azure
+KEY = 'MY_KEY' # authorization key for azure
 group_id = 'employees' # name of personGroup
-bucketName = 'mybuckfucket' # aws s3 bucket name
-
-#*****Raspberry Pi pin setup*****#
-
-
+bucketName = 'MY_NAME' # aws s3 bucket name
 
 #*****Camera Setup*****#
 camera = PiCamera() # initiate camera
 #camera.rotation = 180 # Used to correct orientation of camera
 
-#*****FUNCTIONS*****#
-
-# LED on off functions
-
-# iterates through specified directory, detecting faces in .jpg files
 def iter():
     for fileName in os.listdir(directory):
         if fileName.endswith('.jpg'):
