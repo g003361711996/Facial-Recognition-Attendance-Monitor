@@ -1,0 +1,26 @@
+[
+    {
+        "faceAttributes": {
+            "age": 37.0, 
+            "emotion": {
+                "anger": 0.0, 
+                "contempt": 0.001, 
+                "disgust": 0.0, 
+                "fear": 0.0, 
+                "happiness": 0.0, 
+                "neutral": 0.995, 
+                "sadness": 0.004, 
+                "surprise": 0.0
+            }, 
+            "gender": "male", 
+            "smile": 0.0
+        }, 
+        "faceId": "961926bc-c0a3-4bcb-8044-f31c4a1c4a69", 
+        "faceRectangle": {
+            "height": 208, 
+            "left": 526, 
+            "top": 133, 
+            "width": 208
+        }
+    }
+]

@@ -1,0 +1,93 @@
+<html>
+<head>
+  
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+
+<script>
+
+    $(function() {
+
+
+   
+
+   $.getJSON('attributes.json', function(data) {
+       $.each(data, function(i, f) {
+          var tblRow = 
+          "<tr>" + "<td>" + f.faceAttributes.age + "</td>" +
+          "<td>" + f.faceAttributes.emotion.anger+"%" + "</td>" + 
+          "<td>" + f.faceAttributes.emotion.happiness+"%" + "</td>" + 
+          "<td>" + f.faceAttributes.emotion.sadness+"%" + "</td>" + 
+          "<td>" + f.faceAttributes.emotion.neutral+"%" + "</td>" + 
+          "<td>" + f.faceAttributes.emotion.fear+"%" + "</td>" + 
+          "<td>" + f.faceAttributes.gender + "</td>" + 
+          "<td>" + f.faceAttributes.smile+"%" + "</td>" + "</tr>"
+           $(tblRow).appendTo("#userdata tbody");
+     });
+
+   });
+
+});
+
+    $(function() {
+
+
+   
+
+   $.getJSON('faceId.json', function(data) {
+       $.each(data, function(i, f) {
+          var tblRow = 
+          "<tr>" +
+          "<td>" + f + "</td>"+ "</tr>"
+           $(tblRow).appendTo("#userdata1 tbody");
+     });
+
+   });
+
+});
+setTimeout(function(){
+window.location.reload(1);
+},5000);
+
+</script>
+</head>
+
+<body>
+
+<p id="demo"></p>
+<script>
+var d = new Date();
+document.getElementById("demo").innerHTML =d;
+</script>
+
+<div class="wrapper">
+<div class="profile">
+   <table id= "userdata" border="2">
+  <thead>
+            <th>AGE</th>
+            <th>ANGER</th>
+            <th>HAPPINESS</th>
+            <th>SADNESS</th>
+            <th>NEUTRAL</th>
+            <th>FEAR</th>
+            <th>GENDER</th>
+            <th>SMILING</th>
+        </thead>
+      <tbody>
+
+       </tbody>
+   </table>
+   
+   <table id= "userdata1" border="2">
+  <thead>  
+            <th>ID</th>
+        </thead>
+      <tbody>
+
+       </tbody>
+   </table>
+
+</div>
+</div>
+
+</body>
+</html>

@@ -11,6 +11,21 @@ def preview_image(image, name="window", time=1000):
     if cv2.waitKey(time):
         cv2.destroyAllWindows()
 
+
+def save_dict_to_file(file_name, dict_data):
+    import json
+    with open(file_name, 'w') as outfile:
+        json.dump(dict_data, outfile, indent = 4, sort_keys=True)
+
+
+def load_dict_from_file(file_name):
+    with open(file_name) as data_file:
+        import json
+        data = json.load(data_file)
+        print(json.dumps(data, indent = 4, sort_keys=True))
+        return data
+
+
 def upload_to_s3(key):
     print("Uploading file to S3...")
     bucket_name = 'mybuckfucket'

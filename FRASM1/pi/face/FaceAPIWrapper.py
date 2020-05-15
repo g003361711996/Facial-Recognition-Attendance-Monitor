@@ -3,7 +3,7 @@ import os
 import cognitive_face as CF
 from cognitive_face import CognitiveFaceException
 
-from CONSTANTS import FACE_API_KEY
+from CONSTANTS import FACE_API_KEY, FACE_BASE_URL
 from utils import save_dict_to_file, current_time_to_string, load_dict_from_file
 
 class FaceAPIWrapper:
@@ -21,6 +21,14 @@ class FaceAPIWrapper:
         """Will Silently fail if group already exists"""
         try:
             CF.large_person_group.create(person_group)
+        except CognitiveFaceException as cfe:
+            print(cfe)
+
+    @staticmethod
+    def delete_group(person_group):
+        """Will Silently fail if group does not exist"""
+        try:
+            CF.large_person_group.delete(person_group)
         except CognitiveFaceException as cfe:
             print(cfe)
 
