@@ -10,7 +10,7 @@ GPIO_SWITCH = 24
 IMAGE_PATH = 'captured_images/'
 CAMERA_NAME = os.environ.get('CAMERA_NAME', "Camera1")
 
-FACE_API_KEY = os.environ.get('FACE_API_KEY', "fc36b866a9c84de3bdc3c29df2b7705c")
+FACE_API_KEY = os.environ.get('FACE_API_KEY', "My_key")
 
 FACE_BASE_URL = 'https://projectface.cognitiveservices.azure.com/face/v1.0'
 
